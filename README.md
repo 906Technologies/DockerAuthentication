@@ -1,7 +1,8 @@
 # DockerAuthentication
-*A simple Docker token authentication service implemented in PHP*
+*A simple PAM-based Docker token authentication service implemented in PHP*
 
-This is a straightforward, lightweight implementation of central-service Docker Registry v2 authentication as described in the Docker docs (<https://docs.docker.com/registry/spec/auth/token/>) and the JWT spec (<https://docs.docker.com/registry/spec/auth/jwt/>)
+This is a straightforward, lightweight implementation of central-service Docker Registry v2 authentication as described in the Docker docs (<https://docs.docker.com/registry/spec/auth/token/>) and the JWT spec (<https://docs.docker.com/registry/spec/auth/jwt/>).
+The service uses PAM as its underlying authentication system, but it would be trivial to modify/extend the code to support any sort of username/password based authentication, included something custom.
 
 ## Setup
 
