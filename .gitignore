@@ -1,0 +1,7 @@
+# Add any files that need to be ignored
+config.yml
+/vendor
+/nbproject
+auth.log
+error_log/
+error_log.txt
