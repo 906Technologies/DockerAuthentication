@@ -3,6 +3,17 @@ Docker token authentication service implementation in php
 
 This is a php implementation of Docker Registry v2 authentication via central service.
 
+As described by docker here:
+<https://docs.docker.com/registry/spec/auth/token/>
+and the JWT spec:
+<https://docs.docker.com/registry/spec/auth/jwt/>
+
+Rough implementation outline
+1. Create a config.yml with the fields listed in config.yaml.dist
+2. Create your docker registry plus configuration of a proxy if you wish to have a port in the URL
+3. Update your docker registry config.yml, example listed below
+4. Restart your registry after changes to the registries config.yaml
+
 This is the docker run command I use to initialze my registry I use port 50000 with a apache proxy setup for that port to be served on a subdomain.
 
 ```
@@ -21,6 +32,9 @@ I also overide the intire config.yml for the registry to give me full controll o
 This is my config.yaml, you will have to fill out the placeholders to match your servers configuration.
 
 Issuer must match your issuer that you specify in the config.yml for your authenticaiton service.
+
+The registry configuration docs can be found here:
+<https://docs.docker.com/registry/configuration/>
 
 ```
 version: 0.1
