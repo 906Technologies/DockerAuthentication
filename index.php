@@ -251,7 +251,7 @@ $app->post('/docker/v2/token', function (Request $request) use ($app, $privateKe
 	
 	$response = [
 		'access_token' => $tokenGenerator->createAccessToken($request->request->get('scope'), $expires),
-		'refresh_token' => $tokenGenerator->createRefreshToken(),
+		'refresh_token' => $refreshToken,
 		'expires_in' => ($expires - time()),
 		'issued_at' => $now->format(\DateTime::RFC3339)
 	];
