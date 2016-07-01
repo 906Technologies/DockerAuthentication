@@ -17,9 +17,12 @@ The service uses PAM as its underlying authentication system, but it would be tr
 private_key: "path/to/private/key/privkey.pem"
 issuer: "myAuthService.com"
 audience: "myDockerRegistry.com"
-#optionally
+```
+### Optional Configuration Fields for auth service
+```
 blacklisted_users : ["userNameYouDoNotWantToGiveRegistryAccess"]
 ```
+
 The private key given must be the one used for the certificate that you provide to the "rootcertbundle" registry option described below.
 The issuer and audience can be anything as long as your registry and your auth service agree, but it is recommended that they be based on DNS. The "issuer" represents your authentication service and the "audience" represents your registry. 
 
