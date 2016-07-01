@@ -95,4 +95,8 @@ health:
 
 If you already have a config.yml for your registry, you do not need to change all your settings to match the above. The critical section is the "auth" section.
 
+### Note for Server Configuration
+1. You will need to install the PAM extenstion for PHP: <http://pecl.php.net/package/PAM>
+2. The user you are running this service as will need read access to /etc/shadow. I would sugest creating user for this purpose and setting /etc/shadow to that users group, after chowning /etc/shadow to your users group make sure you chmod g+r /etc/shadow.
+
 
