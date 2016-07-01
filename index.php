@@ -149,7 +149,7 @@ $app->get('/docker/v2/token', function (Request $request) use ($app, $privateKey
 	JWT::$leeway = 60; // $leeway in seconds
 	$log->info('Requested', [$request->getUri()]);
 	
-	$log->info('Headers', $request->headers->all());
+	//$log->info('Headers', $request->headers->all());
 	
 	$authorizationHeader = $request->headers->get('authorization');
 	
